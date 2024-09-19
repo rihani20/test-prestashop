@@ -1,0 +1,36 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+
+
+.top-menu .sub-menu.collapse {
+    top: 71px !important;
+}
+
+
+.subcategory-slider {
+    margin: 20px auto;
+    max-width: 100%; /* Assurez-vous que le slider utilise toute la largeur disponible */
+}
+
+.subcategory-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.subcategory-image {
+    width: 50%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+h3.active {
+    text-decoration: underline; /* Souligner le texte */
+    font-weight: bold; /* Optionnel : rendre le texte plus gras */
+}
+
+.slick-slider {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+}
