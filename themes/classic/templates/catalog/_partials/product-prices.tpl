@@ -24,6 +24,15 @@
  *}
 {if $product.show_price}
   <div class="product-prices">
+
+{if isset($price_with_extra_discount)}
+    <p class="product-price-discount">
+        Prix avec remise supplémentaire : 
+        <span class="price">{$price_with_extra_discount|escape:'html':'UTF-8'}</span>
+    </p>
+{/if}
+
+
     {block name='product_discount'}
       {if $product.has_discount}
         <div class="product-discount">

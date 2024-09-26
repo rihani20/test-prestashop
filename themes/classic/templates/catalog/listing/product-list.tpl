@@ -26,6 +26,7 @@
 
 {block name='content'}
   <section id="main">
+
 {if isset($subcategories) && $subcategories}
     <div class="subcategory-slider">
         <div class="slick-slider">
@@ -33,7 +34,7 @@
                 <div class="subcategory-item">
                     {if isset($subcategory['id_image']) && $subcategory['id_image']}
                         <img src="{$link->getCatImageLink($subcategory['link_rewrite'], $subcategory['id_image'], 'category_default')}" alt="{$subcategory['name']}" class="subcategory-image" />
-                    {else}
+                    {else}git 
                         <img src="{$link->getCatImageLink('default', 'category_default')}" alt="{$subcategory['name']}" class="subcategory-image" />
                     {/if}
                       <a href="{$link->getCategoryLink($subcategory['id_category'])}">

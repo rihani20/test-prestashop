@@ -1117,7 +1117,7 @@
   ),
   'CartController' => 
   array (
-    'path' => '',
+    'path' => 'override/controllers/front/CartController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3247,7 +3247,7 @@
   ),
   'Product' => 
   array (
-    'path' => '',
+    'path' => 'override/classes/Product.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3265,7 +3265,7 @@
   ),
   'ProductController' => 
   array (
-    'path' => '',
+    'path' => 'override/controllers/front/ProductController.php',
     'type' => 'class',
     'override' => false,
   ),

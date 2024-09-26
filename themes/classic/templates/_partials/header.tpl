@@ -72,7 +72,11 @@
             {/if}
         </div>
         <div class="col-md-10 col-sm-12 position-static">
-          {hook h='displayTop'}
+        
+          {hook h='displayCategoryProductList'}
+
+                    {hook h='displayTop'}
+
           <div class="clearfix"></div>
         </div>
       </div>

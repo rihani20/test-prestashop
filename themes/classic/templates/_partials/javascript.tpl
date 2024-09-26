@@ -25,7 +25,7 @@
 {foreach $javascript.external as $js}
   <script type="text/javascript" src="{$js.uri}" {$js.attribute}></script>
 {/foreach}
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 {foreach $javascript.inline as $js}
   <script type="text/javascript">
     {$js.content nofilter}

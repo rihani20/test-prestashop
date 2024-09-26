@@ -13,14 +13,22 @@ class CategoryController extends CategoryControllerCore
         $subcategories = $category->getSubCategories($this->context->language->id);
 
         // Ajouter le nombre de produits pour chaque sous-catégorie
-        foreach ($subcategories as &$subcategory) {
+       foreach ($subcategories  as &$subcategory) {
             $subcategoryObj = new Category($subcategory['id_category'], $this->context->language->id);
             $subcategory['product_count'] = $subcategoryObj->getProducts(null, 0, 0, 'id_product', 'ASC', true);
-        }
+        } 
+        $productsByColor = Product::getProductsByColor($this->category->id, $this->context->language->id);
 
+    
         // Assigner les sous-catégories au template
         $this->context->smarty->assign(array(
-            'subcategories' => $subcategories
+            'subcategories' => $subcategories,
+            'productsByColor'=> $productsByColor
         ));
     }
+
+
+    
+
+
 }

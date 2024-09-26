@@ -29,7 +29,7 @@
     </a>
   </div>
   <div class="media-body">
-    <p class="product-category">{$product.category}</p>
+    <p class="product-category" style="font-weight: bold; color: red">{$product.category}</p>
     <span class="product-name">{$product.name}</span>
     <span class="product-quantity">x{$product.quantity}</span>
     <span class="product-price float-xs-right">{$product.price}</span>

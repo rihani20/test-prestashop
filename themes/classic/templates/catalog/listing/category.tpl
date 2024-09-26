@@ -29,25 +29,18 @@
 {block name='product_list_header'}
     {include file='catalog/_partials/category-header.tpl' listing=$listing category=$category}
 
-
-{if isset($subcategories) && $subcategories}
-    <div class="subcategory-slider">
-        <div class="slick-slider">
-            {foreach from=$subcategories item=subcategory}
-                <div class="subcategory-item">
-                    {if isset($subcategory['id_image']) && $subcategory['id_image']}
-                        <img src="{$link->getCatImageLink($subcategory['link_rewrite'], $subcategory['id_image'], 'category_default')}" alt="{$subcategory['name']}" class="subcategory-image" />
-                    {else}
-                        <img src="{$link->getCatImageLink('default', 'category_default')}" alt="{$subcategory['name']}" class="subcategory-image" />
-                    {/if}
-                      <a href="{$link->getCategoryLink($subcategory['id_category'])}">
-                               <h3> {$subcategory['name']}</h3>
-                            </a>
-                    <p>{$subcategory['product_count']} Items</p>
-                </div>
-            {/foreach}
-        </div>
+{if isset($productsByColor) && $productsByColor|@count > 0}
+    <div class="product-grid">
+        {foreach from=$productsByColor item=product}
+            <div class="product-item">
+                <p>{$product.product_name} <br> <span>{$product.reference}</span></p>
+                <div id="color_product" style="height: 25px; width: 25px; background-color: {$product.color_value}"></div>
+            </div>
+        {/foreach}
     </div>
+{else}
+    <p>No products found in this category.</p>
 {/if}
+
 
 {/block}

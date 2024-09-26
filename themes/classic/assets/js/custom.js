@@ -5,9 +5,9 @@
 
     $(document).ready(function(){
         $('.slick-slider').slick({
-            slidesToShow: 2, // Nombre de sous-catégories à afficher en même temps
+            slidesToShow: 3, // Nombre de sous-catégories à afficher en même temps
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2000,
             dots: true,
             arrows: true,

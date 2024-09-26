@@ -27,6 +27,12 @@
 {block name='content'}
 
   <section id="main">
+
+  {if isset($cookie->welcome_message)}
+    <p>{$cookie->welcome_message}</p>
+{/if}
+
+
     <div class="cart-grid row">
 
       <!-- Left Block: cart product informations & shpping -->
